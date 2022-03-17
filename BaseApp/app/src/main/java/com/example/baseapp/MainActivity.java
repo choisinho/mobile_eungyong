@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "버튼이 눌렸네요", Toast.LENGTH_SHORT).show();;
             }
         });
-
         checkBox1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
