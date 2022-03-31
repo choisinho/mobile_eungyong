@@ -1,0 +1,48 @@
+package com.example.self5_3;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    EditText edt;
+    Button btn;
+    TextView tview;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        LinearLayout baseLayout = new LinearLayout(this);
+        baseLayout.setOrientation(LinearLayout.VERTICAL);
+        setContentView(baseLayout);
+
+        edt = new EditText(this);
+        edt.setHint("여기에 입력하세요");
+        baseLayout.addView(edt);
+
+        btn = new Button(this);
+        btn.setText("버튼입니다");
+        btn.setBackgroundColor(Color.YELLOW);
+        baseLayout.addView(btn);
+
+        tview = new TextView(this);
+        tview.setText("텍스트뷰입니다.");
+        tview.setTextSize(20);
+        tview.setTextColor(Color.MAGENTA);
+        baseLayout.addView(tview);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                tview.setText(edt.getText().toString());
+            }
+        });
+    }
+}
+
