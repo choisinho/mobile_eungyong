@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                result = Integer.parseInt(num1)+Integer.parseInt(num2);
-                txtRes.setText("계산결과 : "+result);
+                result = Integer.parseInt(num1) + Integer.parseInt(num2);
+                txtRes.setText("계산결과 : " + result);
             }
         });
         sub.setOnClickListener(new View.OnClickListener() {
@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                result = Integer.parseInt(num1)-Integer.parseInt(num2);
-                txtRes.setText("계산결과 : "+result);
+                result = Integer.parseInt(num1) - Integer.parseInt(num2);
+                txtRes.setText("계산결과 : " + result);
             }
         });
         mul.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                result = Integer.parseInt(num1)*Integer.parseInt(num2);
-                txtRes.setText("계산결과 : "+result);
+                result = Integer.parseInt(num1) * Integer.parseInt(num2);
+                txtRes.setText("계산결과 : " + result);
             }
         });
         div.setOnClickListener(new View.OnClickListener() {
@@ -67,24 +67,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 num1 = edit1.getText().toString();
                 num2 = edit2.getText().toString();
-                result = Integer.parseInt(num1)/Integer.parseInt(num2);
-                txtRes.setText("계산결과 : "+result);
+                result = Integer.parseInt(num1) / Integer.parseInt(num2);
+                txtRes.setText("계산결과 : " + result);
             }
         });
 
-        for (i=0; i<numBtn.length; i++)
+        for (i = 0; i < numBtn.length; i++)
             numBtn[i] = (Button) findViewById(btnIDs[i]);
 
-        for (i=0; i<numBtn.length; i++) {
+        for (i = 0; i < numBtn.length; i++) {
             int index = i;
             numBtn[index].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (edit1.isFocused()) {
-                        num1 = edit1.getText().toString()+numBtn[index].getText().toString();
+                        num1 = edit1.getText().toString() + numBtn[index].getText().toString();
                         edit1.setText(num1);
                     } else if (edit2.isFocused()) {
-                        num2 = edit2.getText().toString()+numBtn[index].getText().toString();
+                        num2 = edit2.getText().toString() + numBtn[index].getText().toString();
                         edit2.setText(num2);
                     }
                 }
