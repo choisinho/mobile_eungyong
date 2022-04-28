@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/choi_/Documents/GitHub/mobile_eungyong/project/TapSwipeView/app/src/main/res/layout/tabswipeevent_activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/choi_/Documents/GitHub/mobile_eungyong/project/TapSwipeView/app/src/main/res/layout/tabswipeevent_frag1.xml" value="0.1125" />
+        <entry key="..\:/Users/choi_/Documents/GitHub/mobile_eungyong/project/TapSwipeView/app/src/main/res/layout/tabswipeevent_frag2.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/choi_/Documents/GitHub/mobile_eungyong/project/TapSwipeView/app/src/main/res/layout/tabswipeevent_frag3.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/choi_/Documents/GitHub/mobile_eungyong/project/TapSwipeView/app/src/main/res/layout/tabswipeview_frag1.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/choi_/Documents/GitHub/mobile_eungyong/project/TapSwipeView/app/src/main/res/layout/tabswipeview_frag2.xml" value="0.2351851851851852" />
+        <entry key="..\:/Users/choi_/Documents/GitHub/mobile_eungyong/project/TapSwipeView/app/src/main/res/layout/tabswipeview_frag3.xml" value="0.2351851851851852" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="메인 콘텐트 뷰"/>
+        <Button
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_bright"
+            android:text="드로워 뷰(오른쪽)"/>
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_green_light"
+            android:text="드로워 뷰(왼 쪽)"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
