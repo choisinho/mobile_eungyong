@@ -2,6 +2,7 @@ package com.example.oxquiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import java.util.Date;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    static int dailyCount;
+    static int dailyCount, userAnswer, userScore; //일일 횟수, 유저 답안, 유저 점수
     TextView today, content;
     Button refresh, btn1, btn2, btn3, btn4;
     String[] contents;
@@ -104,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void showRandomQuiz() {
+        if (dailyCount > 10) {
+            return;
+        }
         Random random = new Random();
         final int quizNum = random.nextInt(20); //몇번째 퀴즈를 낼 것인지?
         setQuizContent(contents[quizNum]);
@@ -117,19 +121,51 @@ public class MainActivity extends AppCompatActivity {
         content.setText(str);
     }
 
-    void setBtnText(int idx, String str) {
+    void setBtnText(final int idx, String str) {
         switch (idx) {
             case 1:
                 btn1.setText("① " + str);
+                btn1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        userAnswer = idx;
+                        dailyCount++;
+                        showRandomQuiz();
+                    }
+                });
                 return;
             case 2:
                 btn2.setText("② " + str);
+                btn2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        userAnswer = idx;
+                        dailyCount++;
+                        showRandomQuiz();
+                    }
+                });
                 return;
             case 3:
                 btn3.setText("③ " + str);
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        userAnswer = idx;
+                        dailyCount++;
+                        showRandomQuiz();
+                    }
+                });
                 return;
             case 4:
                 btn4.setText("④ " + str);
+                btn4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        userAnswer = idx;
+                        dailyCount++;
+                        showRandomQuiz();
+                    }
+                });
                 return;
             default:
         }
