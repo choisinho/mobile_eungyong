@@ -3,6 +3,7 @@ package com.example.oxquiz;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,7 @@ import java.util.Date;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    static int dailyCount, userAnswer, userScore; //일일 횟수, 유저 답안, 유저 점수
+    static int dailyCount, userAnswer, userScore; //일일 횟수(DB에서 불러오기), 유저 답안, 유저 점수
     TextView today, content;
     Button refresh, btn1, btn2, btn3, btn4;
     String[] contents;
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 "재산이 많은 부자일수록 세율이 높아지는 세금이 아닌 것은?",
                 "부동산과 정보기술(IT)을 결합한 서비스산업을 가리키는 말은?", //20
         };
-        options = new String[][] {
+        options = new String[][]{
                 {"물가 및 경기 안정 중시", "인플레이션 파이터", "긴축 선호", "완화 선호"}, //완화선호
                 {"제롬 파월", "재닛 옐런", "조 바이든", "카멀라 해리스"}, //제롬 파월
                 {"기저효과", "낙수효과", "승수효과", "구축효과"}, //승수효과
@@ -106,6 +107,17 @@ public class MainActivity extends AppCompatActivity {
 
     void showRandomQuiz() {
         if (dailyCount > 10) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("10문제를 모두 풀었습니다!!")
+                    .setMessage("오늘 맞힌 횟수: " + userScore)
+                    .setPositiveButton("내일 만나요.", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            finishAffinity();
+                        }
+                    });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
             return;
         }
         Random random = new Random();
