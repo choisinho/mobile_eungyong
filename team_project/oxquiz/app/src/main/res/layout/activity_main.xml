@@ -36,6 +36,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="180dp"
+        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="10dp">
@@ -79,6 +80,7 @@
             android:stateListAnimator="@null"
             android:text="① 첫번째 지문입니다."
             android:textAlignment="textStart"
+            android:textColor="@color/dark_gray"
             android:textSize="24sp" />
 
         <Button
@@ -91,6 +93,7 @@
             android:stateListAnimator="@null"
             android:text="② 두번째 지문입니다."
             android:textAlignment="textStart"
+            android:textColor="@color/dark_gray"
             android:textSize="24sp" />
 
         <Button
@@ -103,6 +106,7 @@
             android:stateListAnimator="@null"
             android:text="③ 세번째 지문입니다."
             android:textAlignment="textStart"
+            android:textColor="@color/dark_gray"
             android:textSize="24sp" />
 
         <Button
@@ -114,6 +118,7 @@
             android:stateListAnimator="@null"
             android:text="④ 네번째 지문입니다."
             android:textAlignment="textStart"
+            android:textColor="@color/dark_gray"
             android:textSize="24sp" />
     </LinearLayout>
 </LinearLayout>
