@@ -1,0 +1,7 @@
+cd C:\Program Files\Android\Android Studio\jre\bin
+
+keytool -list -v -keystore "%USERPROFILE%\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+SHA1: 2E:E6:1A:A8:D2:8D:86:42:CD:7A:F8:95:C4:16:A1:6F:48:8A:84:26
+
+API key: AIzaSyDBramSfyL99e_A3vCtG6f7CG-c9_QVybM
